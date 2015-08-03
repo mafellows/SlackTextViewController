@@ -688,14 +688,12 @@ NSInteger const SLKAlertViewClearTextTag = 1534347677; // absolute hash of 'SLKT
 }
 
 - (BOOL)canPressRightButton
-{
-    NSString *text = [self.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    if (text.length > 0 && ![self.textInputbar limitExceeded]) {
-        return YES;
+{    
+    if ([self.textInputbar limitExceeded]) {
+        return NO;
     }
     
-    return NO;
+    return YES;
 }
 
 - (void)didPressLeftButton:(id)sender

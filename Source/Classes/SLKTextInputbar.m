@@ -156,7 +156,7 @@
 {
     if (!_leftButton)
     {
-        _leftButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftButton.translatesAutoresizingMaskIntoConstraints = NO;
         _leftButton.titleLabel.font = [UIFont systemFontOfSize:15.0];
     }
